@@ -89,9 +89,23 @@ button {  width: auto; overflow: visible; }
 /* Fucking lists man... */
 ul {
 	list-style: none;
+	margin: 1em 0;
 }
 ul li {
-	
+	float: left;
+	height: 38px;
+	width: 20px;
+	text-align: center;
+	padding: 4px 15px;
+	margin: 0 4px 7px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+ul li kbd {
+	display: block;
+}
+ul li kbd:first-child {
+	padding-bottom: 5px;
 }
 
 @media screen and (min-width: 960px) {
