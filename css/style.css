@@ -101,34 +101,50 @@ header {
 	padding: 0;
 }
 
+article {
+	margin: 0 auto;
+	height: 354px;
+	width: 753px;
+	overflow: hidden;
+	background: url("../images/keyboard_background.jpg") no-repeat center center;
+}
+
 ul {
 	list-style: none;
-	margin: 1em 0;
+	margin: 0;
+	padding: 0;
 	clear: left;
+	overflow: hidden;
+}
+ul:nth-child(1) {
+	margin-top: 85px;
+	margin-left: 15px;
 }
 ul:nth-child(2) {
-	margin-left: 80px;
+	margin-left: 87px;
 }
 ul:nth-child(3) {
-	margin-left: 120px;
+	margin-left: 100px;
 }
 ul:nth-child(4) {
-	margin-left: 160px;
+	margin-left: 125px;
 }
 ul li {
 	float: left;
 	padding: 0;
 	margin: 0 2px 7px;
-	border: 1px solid grey;
-	border-radius: 5px;
+	
 }
 ul li dl {
 	display: block;
 	width: 40px;
 	height: 50%;
-	padding: 5px 4px;
+	padding: 5px 2px;
 	text-align: center;
-	background: #aaa;
+	background: #fff;
+	border: 1px solid grey;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 ul li dl dt:hover {
 	background: red;
@@ -136,11 +152,6 @@ ul li dl dt:hover {
 ul li dl dd {
 	display: none;
 }
-ul li:first-child {
-	border-bottom: 1px solid #ddd;
-	background: #ddd;
-}
-
 dl {
 	margin: 0;
 }
