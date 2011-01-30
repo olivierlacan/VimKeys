@@ -87,95 +87,69 @@ button {  width: auto; overflow: visible; }
  */ 
  
 /* Fucking lists man... */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	margin: 1em;
+}
+
+#main {
+	margin: 0;
+	padding: 0;
+}
+
 ul {
 	list-style: none;
 	margin: 1em 0;
+	clear: left;
+}
+ul:nth-child(2) {
+	margin-left: 80px;
+}
+ul:nth-child(3) {
+	margin-left: 120px;
+}
+ul:nth-child(4) {
+	margin-left: 160px;
 }
 ul li {
 	float: left;
-	height: 38px;
-	width: 20px;
-	text-align: center;
-	padding: 4px 15px;
-	margin: 0 4px 7px;
+	padding: 0;
+	margin: 0 2px 7px;
 	border: 1px solid grey;
 	border-radius: 5px;
 }
-ul li kbd {
+ul li dl {
 	display: block;
+	width: 40px;
+	height: 50%;
+	padding: 5px 4px;
+	text-align: center;
+	background: #aaa;
 }
-ul li kbd:first-child {
-	padding-bottom: 5px;
+ul li dl dt:hover {
+	background: red;
+}
+ul li dl dd {
+	display: none;
+}
+ul li:first-child {
+	border-bottom: 1px solid #ddd;
+	background: #ddd;
+}
+
+dl {
+	margin: 0;
 }
 
 @media screen and (min-width: 960px) {
-	body {
-		width: 80%;
-		margin: 0 auto;
-	} 
-	
-	header {
-		background: red;
-		overflow: hidden;
-		margin-bottom: 1em;
-	}
-	header #badge {
-		float: left;
-		margin: 0 1em 0 0;
-		width: 3.5em;
-		height: 3.5em;
-		line-height: 3.5em;
-		font-size: 2em;
-		font-weight: bold;
-		color: #ddd;
-		text-shadow: 0 1px 0 #111;
-		text-align: center;
-		background: #333;
-		border-radius: 50%;	
-		-webkit-border-radius: 50%;
-		box-shadow: 0 0 4px #333;
-		-webkit-box-shadow: 0 0 1px #fff inset;
-	}
-	
-	header #title {
-		float: left;
-		width: 70%;
-		padding: .25em 0 .25em 0;
-		border-bottom: 1px solid #ccc;
-	}
-	header h1 {
-		font-size: 2.5em;
-		font-weight: normal;
-	}
-	
-	#container {
-		margin: 3em 0;
-		width: 100%;
-	}
-	#container p:first-child {
-		clear: both;
-	}
-	#container p {
-		font-size: 2em;
-		margin: 0 0 1em 0;
-	}
-	p#art {
-		font-size: 2.5em;
-	}
-	p#reward {
-		font-size: 1.35em;
-	}
-	p#world {
-		font-size: 4em;
-	}
-	p#engineers {
-		font-size: 4em;
-	}
+
 }
 @media screen and (max-width: 640px) {
-	header {
-		background: green;
-	}
+
 }
 
 @media all and (orientation:portrait) { 
