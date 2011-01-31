@@ -111,26 +111,13 @@ article {
 
 ul {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 0 11px;
 	padding: 0;
 	clear: left;
 	overflow: hidden;
 }
-ul:nth-child(1) {
+ul:first-child {
 	margin-top: 70px;
-	margin-left: 14px;
-}
-ul:nth-child(2) {
-	margin-left: 86px;
-}
-ul:nth-child(3) {
-	margin-left: 99px;
-}
-ul:nth-child(4) {
-	margin-left: 124px;
-}
-ul:nth-child(5) {
-	margin-left: 14px;
 }
 ul li {
 	float: left;
@@ -147,41 +134,65 @@ ul li dl {
 	display: block;
 	width: 45px;
 	height: 50%;
-	margin: 2px 1px;
+	margin: 1px 1px;
 	padding: 0;
 	text-align: center;
-	background: #ccc;
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ddd));
-	box-shadow: 0 0 2px #000;
-	-webkit-box-shadow: 0px 1px 0px #fff inset,
-						1px 0 0px #fff inset,
-						-1px 0 0px #fff inset,
-						0 -1px 1px #222 inset;
+	box-shadow: 0px 1px 0px #fff inset,
+				1px 0 0px #fff inset,
+				-1px 0 0px #fff inset,
+				0 -1px 1px #222 inset;
+	-webkit-box-shadow: 0px 1px 0px #fff inset /* top */,
+						1px 0 0px #fff inset /* left */,
+						-1px 0 0px #fff inset /* right */ ,
+						0 -1px 1px #222 inset /* bottom */;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border: 1px solid #000;
 	
 }
-ul li dl dt {
-	padding: 6px 0 5px;
+ul li dl {
+	/*height: 45px;*/
 }
+
+ul:first-child {
+	font-size: 10px;
+}
+ul:first-child li {
+	margin-right: 2px;
+}
+ul:first-child li dl {
+	width: 39px;
+	padding: 10px 3px 8px 3px;
+	height: 10px;
+}
+
+ul:first-child li dl dt {
+	text-align: right;
+	font-size: 8px;
+	vertical-align: bottom;
+	
+}
+
 ul li dl dt:first-child {
-	padding-bottom: 2px;
+	padding: 5px 0 0px;
+}
+ul li dl dt:nth-child(3) {
+	padding: 0px 0 5px;
 }
 ul li dl dt:first-child:hover {
 	background: #111;
+	box-shadow: 0 0 5px #000;
 	color: #ccc;
-	-webkit-border-top-left-radius: inherit;
-	-webkit-border-top-right-radius: inherit;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
 }
-ul li dl dt:nth-child(3) {
-	padding-top: 2px;
-}
+
 ul li dl dt:nth-child(3):hover {
 	background: #222;
 	color: #ccc;
-	-webkit-border-bottom-left-radius: inherit;
-	-webkit-border-bottom-right-radius: inherit;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
 }
 ul li dl dd {
 	display: none;
@@ -190,8 +201,189 @@ dl {
 	margin: 0;
 }
 
+
 kbd {
 	font-family: Helvetica, Arial, sans-serif;
+}
+#delete, 
+#tab, 
+#capsLock, 
+#enter dt:nth-child(3), 
+#leftShift, 
+#rightShift, 
+#fn, 
+#control, 
+#leftAlt dt:nth-child(3), 
+#leftCommand dt:nth-child(3), 
+#rightCommand dt:nth-child(3), 
+#rightAlt dt:nth-child(3) {
+	font-size: 10px;
+}
+#enter dt:nth-child(1), 
+#leftAlt dt:nth-child(1), 
+#leftCommand dt:nth-child(1), 
+#rightCommand dt:nth-child(1), 
+#rightAlt dt:nth-child(1) {
+	font-size: 9px;
+}
+#escape dt, #eject dt {
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+#tab, #delete {
+	width:  55px;
+}
+#tab {
+	text-align: left;
+	padding: 6px 5px 0;
+}
+#delete {
+	text-align: right;
+	padding: 6px 5px 0;
+}
+#capsLock, #enter {
+	width: 73px;
+}
+#capsLock {
+	text-align: left;
+	padding: 6px 0 0 5px;
+}
+#enter {
+	text-align: right;
+	padding: 7px 5px 0;
+}
+#leftShift, #rightShift {
+	width: 99px;
+}
+#leftShift {
+	text-align: left;
+	padding: 6px 0 0 5px;
+}
+#rightShift {
+	text-align: right;
+	padding: 6px 5px 0;
+}
+#fn {
+	width: 40px;
+	text-align: left;
+	padding: 10px 0 0 5px;
+}
+#control {
+	width: 40px;
+	padding: 10px 0 0 5px;
+	text-align: left;
+}
+#leftAlt, #rightAlt {
+	width: 40px;
+}
+#leftAlt {
+	text-align: left;
+	padding: 11px 0 0 5px;
+}
+#rightAlt {
+	text-align: right;
+	padding: 11px 5px 0 0;
+}
+#leftCommand, #rightCommand {
+	width: 48px;
+}
+#leftCommand {
+	text-align: right;
+	padding: 10px 5px 0 0;
+}
+#rightCommand {
+	text-align: left;
+	padding: 10px 0 0 5px;
+}
+#spaceBar {
+	width: 250px;
+	height: 45px;
+}
+ul:last-child {
+	height: 80px;
+}
+#leftArrow, #rightArrow, #upArrow, #downArrow {
+	font-size: 9px;
+}
+#leftArrow {
+	height: 11px;
+	margin: 14px 15px 0 13px;
+	padding: 10px 4px 20px;
+	width: 15px;
+	background: -webkit-gradient(linear, 100% 100%, 0% 0%, from(#eee), to(#ddd));
+	-webkit-box-shadow: 1px 0 1px #222 inset /* bottom (top layer) */,
+						-1px 0 0 #fff inset /* top */,
+						0 -1px 0 #fff inset /* right */,
+						0 1px 0 #fff inset /* left */;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #000;
+	-webkit-transform:rotate(-90deg);
+}
+#rightArrow {
+	height: 11px;
+	margin: 14px 0 0 17px;
+	padding: 10px 4px 20px;
+	width: 15px;
+	background: -webkit-gradient(linear, 100% 100%, 0% 0%, from(#eee), to(#ddd));
+	-webkit-box-shadow: 1px 0 0 #fff inset /* top (top layer) */,
+						-1px 0 1px #fff inset /* bottom */,
+						0 -1px 0 #fff inset /* left */,
+						0 1px 0 #fff inset /* right */;
+	-webkit-transform:rotate(90deg);
+}
+#updown {
+	background: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+	margin: 1px 0 0 0;
+	padding: 0 0 0 0;
+}
+#upArrow {
+	width: 35px;
+	margin: 0px 0 0;
+	padding: 6px 5px;
+	text-align: center;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ddd));
+	box-shadow: 0px 1px 0px #fff inset,
+				1px 0 0px #fff inset,
+				-1px 0 0px #fff inset,
+				0 -1px 1px #222 inset;
+	-webkit-box-shadow: 0px 1px 0px #fff inset /* top */,
+						1px 0 0px #fff inset /* left */,
+						-1px 0 0px #fff inset /* right */ ,
+						0 -1px 1px #222 inset /* bottom */;
+	border-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	
+	border: 1px solid #000;
+}
+#downArrow {
+	width: 35px;
+	margin: -3px 0 0;
+	padding: 6px 5px;
+	text-align: center;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ddd));
+	box-shadow: 0px 1px 0px #fff inset,
+				1px 0 0px #fff inset,
+				-1px 0 0px #fff inset,
+				0 -1px 1px #222 inset;
+	-webkit-box-shadow: 0px 1px 0px #fff inset /* top */,
+						1px 0 0px #fff inset /* left */,
+						-1px 0 0px #fff inset /* right */ ,
+						0 -1px 1px #222 inset /* bottom */;
+	border-radius: 5px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border: 1px solid #000;
 }
 
 @media screen and (min-width: 960px) {
